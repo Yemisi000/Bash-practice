@@ -1,0 +1,310 @@
+Exercise 1
+#!/bin/bash
+# Text to the right of a '#' is treated as a comment - below is the shell command
+echo 'Hello, World!'
+
+Output
+Hello, World
+
+Exercise 2
+#!/bin/bash
+# Change this code
+BIRTHDATE="Jan 1, 2000"
+Presents=10
+BIRTHDAY="Saturday"
+
+
+# Testing code - do not change it
+
+if [ "$BIRTHDATE" == "Jan 1, 2000" ] ; then
+    echo "BIRTHDATE is correct, it is $BIRTHDATE"
+else
+    echo "BIRTHDATE is incorrect - please retry"
+fi
+if [ $Presents == 10 ] ; then
+    echo "I have received $Presents presents"
+else
+    echo "Presents is incorrect - please retry"
+fi
+if [ "$BIRTHDAY" == "Saturday" ] ; then
+    echo "I was born on a $BIRTHDAY"
+else
+    echo "BIRTHDAY is incorrect - please retry"
+fi
+
+
+Output
+BIRTHDATE is correct, it is Jan 1, 2000
+I have received 10 presents
+I was born on a Saturday
+
+
+Exercise 3
+#!/bin/bash
+# Welcome to the Interactive Shell Tutorial.
+# Start by choosing a chapter and
+# write your code in this window.
+
+echo "Hello, World!";
+#!/bin/bash
+echo "File name is "$0 # holds the current script
+echo $3 # $3 holds banana
+Data=$5
+echo "A $Data costs just $6."
+echo $#
+
+Output
+Hello, World!
+File name is ./prog.sh
+
+A  costs just .
+0
+
+Exercise 4
+
+#!/bin/bash
+NAMES=( John Eric Jessica )
+# write your code here
+NUMBERS=(1 2 3)
+STRINGS=(hello world)
+NumberOfNames=$#3
+second_name=[Eric]
+
+Output:Nothing
+
+Exercise 5
+#!/bin/bash 
+
+COST_PINEAPPLE=50
+
+COST_BANANA=4
+
+COST_WATERMELON=23
+
+COST_BASKET=1
+
+TOTAL=sum=$((50 + 4 + 23 + 1)) # 78
+
+echo "Total Cost is $78"
+
+Output:Total Cost is 8
+My response: sigh. i dont know why it is 8
+
+Exercise 6
+#!/bin/bash
+
+BUFFETT="Life is like a snowball. The important thing is finding wet snow and a really long hill."
+# write your code here
+STRING="this is a string"
+
+echo ${#STRING}            # 16
+
+
+
+ISSAY="Life is like a snowball" 
+echo ${Life is like a snowball[@]/snow/foot}
+
+
+STRING="The important thing is finding wet snow and a really long hill."
+echo ${The important thing is finding wet snow and a really long hill[@]// snow/}
+
+
+STRING="The important thing is finding wet snow and a really long hill."
+echo ${The important thing is finding wet snow and a really long hill[@]/finding/getting}
+
+
+
+
+# Test code - do not modify
+echo "Warren Buffett said:"
+echo $BUFFETT
+echo "and I say:"
+echo $ISAY
+
+output
+./prog.sh: line 12: ${Life is like a snowball[@]/snow/foot}: bad substitution
+./prog.sh: line 16: ${The important thing is finding wet snow and a really long hill[@]// snow/}: bad substitution
+./prog.sh: line 20: ${The important thing is finding wet snow and a really long hill[@]/finding/getting}: bad substitution
+
+
+Exercise 7
+#!/bin/bash
+# change these variables
+NUMBER=10
+APPLES=12
+KING=GEORGE
+# modify above variables
+# to make all decisions below TRUE
+if [ $10 -gt 15 ] ; then
+  echo 1
+fi
+if [ $12 -eq $APPLES ] ; then
+  echo 2
+fi
+if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
+  echo 3
+fi
+if [[ $(($12 + $APPLES)) -le 32 ]] ; then
+  echo 4
+fi
+
+Output:nothing
+
+Exercise 8
+#!/bin/bash
+NUMBERS=(951 402 984 651 360 69 408 319 601 485 980 507 725 547 544 615 83 165 141 501 263 617 865 575 219 390 237 412 566 826 248 866 950 626 949 687 217 815 67 104 58 512 24 892 894 767 553 81 379 843 831 445 742 717 958 609 842 451 688 753 854 685 93 857 440 380 126 721 328 753 470 743 527)
+
+# write your code here
+
+#!/bin/bash
+# For loop with range increment numbers
+for i in {0..237..2}
+do
+        echo "Element $i"
+done
+
+Output-yipee
+Element 0
+Element 2
+Element 4
+Element 6
+Element 8
+Element 10
+Element 12
+Element 14
+Element 16
+Element 18
+Element 20
+Element 22
+Element 24
+Element 26
+Element 28
+Element 30
+Element 32
+Element 34
+Element 36
+Element 38
+Element 40
+Element 42
+Element 44
+Element 46
+Element 48
+Element 50
+Element 52
+Element 54
+Element 56
+Element 58
+Element 60
+Element 62
+Element 64
+Element 66
+Element 68
+Element 70
+Element 72
+Element 74
+Element 76
+Element 78
+Element 80
+Element 82
+Element 84
+Element 86
+Element 88
+Element 90
+Element 92
+Element 94
+Element 96
+Element 98
+Element 100
+Element 102
+Element 104
+Element 106
+Element 108
+Element 110
+Element 112
+Element 114
+Element 116
+Element 118
+Element 120
+Element 122
+Element 124
+Element 126
+Element 128
+Element 130
+Element 132
+Element 134
+Element 136
+Element 138
+Element 140
+Element 142
+Element 144
+Element 146
+Element 148
+Element 150
+Element 152
+Element 154
+Element 156
+Element 158
+Element 160
+Element 162
+Element 164
+Element 166
+Element 168
+Element 170
+Element 172
+Element 174
+Element 176
+Element 178
+Element 180
+Element 182
+Element 184
+Element 186
+Element 188
+Element 190
+Element 192
+Element 194
+Element 196
+Element 198
+Element 200
+Element 202
+Element 204
+Element 206
+Element 208
+Element 210
+Element 212
+Element 214
+Element 216
+Element 218
+Element 220
+Element 222
+Element 224
+Element 226
+Element 228
+Element 230
+Element 232
+Element 234
+Element 236
+
+
+Exercise 9
+	#!/bin/bash
+	# enter your array comparison code here
+    echo ${array[@]}
+    
+    a=(3 5 8 10 6),b=(6 5 4 12),c=(14 7 5 7)
+    echo ${(3 5 8 10 6),b=(6 5 4 12),c=(14 7 5 7)[@]}
+    
+    Array1=(3 5 8 10 6)
+    Array2=(6 5 4 12)
+    Array3=(14 7 5 7)
+    
+    echo ${Array1[@]} ${Array2[@]} ${Array2[@]}
+    echo ${3 5 8 10 6[@]} ${6 5 4 12[@]} ${14 7 5 7[@]}
+    
+    Output
+./prog.sh: array assign: line 5: syntax error near unexpected token `)'
+./prog.sh: array assign: line 5: `3 5 8 10 6),b=(6 5 4 12),c=(14 7 5 7'
+./prog.sh: line 6: ${(3 5 8 10 6),b=(6 5 4 12),c=(14 7 5 7)[@]}: bad substitution
+./prog.sh: line 13: ${3 5 8 10 6[@]}: bad substitution
+
+Exercise 10
+
